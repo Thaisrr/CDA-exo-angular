@@ -1,0 +1,9 @@
+<div *ngIf="display_dialog" class="overlay">
+  <div class="dialog">
+    <ng-content></ng-content>
+    <div class="btn-container">
+      <button (click)="sendConfirmation(false)" class="btn-tertiary">Annuler</button>
+      <button (click)="sendConfirmation(true)" class="btn-primary btn-alert">Supprimer</button>
+    </div>
+  </div>
+</div>

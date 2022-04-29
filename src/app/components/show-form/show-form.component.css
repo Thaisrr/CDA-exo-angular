@@ -1,0 +1,20 @@
+
+.error {
+  color: crimson;
+  padding-left: 20px;
+}
+
+input.ng-touched.ng-invalid {
+  outline-color: crimson;
+  outline-style: solid;
+}
+
+
+fieldset {
+  width: 25%;
+  margin: 50px auto;
+}
+
+form > div {
+  margin:  20px;
+}

@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.css';
+
+body {
+  margin: 0 !important;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+button, .btn-primary {
+  --main-color: teal;
+  --secondary-color: white;
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border-radius: 5px;
+  border: solid var(--main-color) 1px;
+}
+
+button:disabled, .btn-primary:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--main-color);
+  border-color: transparent;
+}
+
+.btn-alert {
+  --main-color: crimson;
+}
+
+.btn-warning {
+  --main-color: yellow;
+  --secondary-color: black;
+}
+
+.btn-container {
+  display: flex;
+  gap: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+

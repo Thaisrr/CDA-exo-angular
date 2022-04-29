@@ -1,0 +1,39 @@
+{
+  "shows" : [
+    {
+      "id": 1,
+      "title": "Russian Dolls",
+      "author": "Jean Michel",
+      "description": "A la fin tout le monde meurt",
+      "is_watched": true
+    },
+    {
+      "id": 2,
+      "title": "The Walking Dead",
+      "author": "Jean Michel",
+      "description": "A la fin tout le monde meurt",
+      "is_watched": true
+    },
+    {
+      "id" : 3,
+      "title": "The Handmaid's Tale",
+      "author": "Jean Michel",
+      "description": "A la fin tout le monde meurt",
+      "is_watched": true
+    },
+    {
+      "id" : 4,
+      "title": "The Witcher",
+      "author": "Jean Michel",
+      "description": "A la fin tout le monde meurt",
+      "is_watched": true
+    },
+    {
+      "id": 5,
+      "title": "The Office",
+      "author": "Jean Michel",
+      "description": "A la fin tout le monde meurt",
+      "is_watched": false
+    }
+  ]
+}

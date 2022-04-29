@@ -1,0 +1,30 @@
+<div>
+  <fieldset>
+    <legend>Ajouter une série</legend>
+
+    <form [formGroup]="show_group" (ngSubmit)="saveShow()">
+      <div>
+        <label for="title">Titre</label>
+        <input id="title" formControlName="title">
+        <small *ngIf="show_group.controls['title'].touched
+          && show_group.controls['title'].hasError('required')"
+               class="error">Veuillez entrer un titre !</small>
+      </div>
+      <div>
+        <label for="author">Auteur.rice</label>
+        <input id="author" formControlName="author">
+      </div>
+      <div>
+        <label for="desc">Description</label>
+        <textarea id="desc" formControlName="description"></textarea>
+      </div>
+      <div>
+        <label for="seen">Déjà vue ?</label>
+        <input type="checkbox" id="seen" formControlName="is_watched"/>
+      </div>
+      <div>
+        <button [disabled]="!show_group.valid" type="submit" class="btn-primary">Save</button>
+      </div>
+    </form>
+  </fieldset>
+</div>

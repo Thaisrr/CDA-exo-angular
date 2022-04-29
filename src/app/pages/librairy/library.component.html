@@ -1,0 +1,32 @@
+<main>
+  <h1>Mes séries</h1>
+
+  <app-show-form (save_event)="saveShow($event)"></app-show-form>
+
+  <div class="btn-container">
+    <button (click)="changeArray('ALL')">Tout</button>
+    <button (click)="changeArray(true)">Vues</button>
+    <button (click)="changeArray(false)">Pas Vues</button>
+  </div>
+
+  <div class="grid">
+    <app-card
+      *ngFor="let show_el of displayed_shows"
+      [show]="show_el"
+      (modify_event)="setVisibility($event)"
+      (delete_event)="openDialog($event)"
+    ></app-card>
+  </div>
+  <div *ngIf="!displayed_shows || displayed_shows.length === 0">
+    <p>Aucune série ne correspond à votre recherche.</p>
+  </div>
+</main>
+
+<app-yes-no-dialog
+  (confirm_event)="deleteShow($event)"
+  [display_dialog]="open_dialog"
+>
+  <h2>Alerte</h2>
+  <p>La série "{{this.deleting_show?.title}}" va être supprimée. </p>
+  <p>Cette action est définitive !</p>
+</app-yes-no-dialog>

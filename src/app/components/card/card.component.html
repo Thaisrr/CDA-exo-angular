@@ -1,0 +1,29 @@
+<div
+  [ngClass]="show.is_watched? 'green' : 'red'"
+  class="card"
+>
+  <h3>{{show.title}}</h3>
+  <p>-- {{show.author | name}}</p>
+  <p>"{{show.description}}"</p>
+  <!--
+<p>
+
+  <button (click)=sendModify()>{{ show.is_watched? 'Marquer comme pas vue' :' Marquer comme vue'}}</button>
+-->
+  <div class="btn-container">
+    <p *ngIf="show.is_watched; then watched else notWatched"></p>
+    <ng-template #watched>
+      <button class="btn-primary" (click)="sendModify()" >
+        <span class="material-icons-outlined">visibility_off</span>
+      </button>
+    </ng-template>
+    <ng-template #notWatched>
+      <button class="btn-primary" (click)="sendModify()">
+        <span class="material-icons-outlined">visibility</span>
+      </button>
+    </ng-template>
+
+    <button class="btn-tertiary btn-alert" (click)="sendDelete()">Supprimer</button>
+  </div>
+
+</div>
